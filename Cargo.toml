@@ -2,5 +2,8 @@
 name = "rust-cssr"
 version = "0.1.0"
 authors = ["Felix Gimeno <z95341@gmail.com>"]
+edition = "2021"
 
 [dependencies]
+clap = { version = "4.0", features = ["derive"] }
+statrs = "0.17.0"
