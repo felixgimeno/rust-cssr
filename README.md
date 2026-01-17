@@ -39,3 +39,16 @@ To run the tests for this project, you can use the following command:
 ```bash
 cargo test
 ```
+
+## Developer Notes
+
+This section contains a summary of the key learnings and conventions used in this repository.
+
+- **Deep Planning Mode**: Before making any changes, it is important to start in a deep planning mode. This involves asking clarifying questions to fully understand requirements and goals, confirming assumptions, and only creating a plan once there is absolute certainty. Use `request_user_input` for this interaction.
+- **Robust Code**: The user prefers robust code with comprehensive tests and proper error handling (avoiding `.unwrap()`).
+- **Project Structure**: This repository is a modern Rust implementation of the Causal State Splitting Reconstruction (CSSR) algorithm. The project is structured as a Rust workspace with a library crate (`src/lib.rs`) for the core logic and a binary crate (`src/bin/main.rs`) for the command-line interface.
+- **Rust Edition**: The project is configured to use the Rust 2021 edition in `Cargo.toml`.
+- **Dependencies**:
+    - The project uses the `clap` crate for command-line argument parsing.
+    - The project uses the `statrs` crate for statistical calculations.
+- **Testing**: Use `cargo test` to run all unit and integration tests.
